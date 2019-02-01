@@ -42,9 +42,18 @@ public class recursion{
     }
 
     /*As Per classwork*/
-    public static ArrayList<Integer> makeAllSums(){
+    public static ArrayList<Integer> makeAllSums(int n){
       ArrayList<Integer> result = new ArrayList<Integer>();
+      sumsH(n, 0, result);
       return result;
+    }
+
+    private static void sumsH(int n, int currentSum, ArrayList<Integer> list) {
+      if (n == 0) {
+        list.add(currentSum);
+      }
+      sumsH(n-1, currentSum+n, list); // number n is added
+      sumsH(n-1, currentSum, list); // number n is NOT added
     }
 
     public static void main(String[] args) {
