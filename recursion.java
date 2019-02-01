@@ -36,7 +36,7 @@ public class recursion{
         return 0;
       }
       if (n < 3) {
-        return second + first;
+        return second;
       }
       return fibH(n-1,second,first+second);
     }
@@ -52,6 +52,12 @@ public class recursion{
       System.out.println(recursion.sqrt(1, 0.001));
       System.out.println(recursion.sqrt(0, 0.001));
       System.out.println(recursion.sqrt((99*99), 0.001));
+      System.out.println(recursion.fib(0)); //0
+      System.out.println(recursion.fib(1)); //1
+      System.out.println(recursion.fib(2)); //1
+      System.out.println(recursion.fib(5)); //5
+      System.out.println(recursion.fib(7)); //13
+      System.out.println(recursion.fib(10)); //55
     }
 
 }
