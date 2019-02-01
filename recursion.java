@@ -15,8 +15,12 @@ public class recursion{
       return sqrtH(n, 1.0, tolerance);
     }
 
-    private double sqrtH(double d, double guess, double tolerance) {
-      
+    private static double sqrtH(double d, double guess, double tolerance) {
+      if ((Math.abs(d - guess * guess)) / d * 100 <= tolerance) {
+        return guess;
+      }
+      guess = (d / guess + guess) / 2;
+      return sqrtH(d, guess, tolerance);
     }
 
     /*Recursively find the n'th fibbonaci number in linear time
@@ -24,11 +28,13 @@ public class recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
-
+      return 0;
     }
 
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(){
+      ArrayList<Integer> result = new ArrayList<Integer>();
+      return result;
     }
 
 }
