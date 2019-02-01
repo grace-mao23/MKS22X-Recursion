@@ -16,7 +16,7 @@ public class recursion{
     }
 
     private static double sqrtH(double d, double guess, double tolerance) {
-      if ((Math.abs(d - guess * guess)) / d * 100 <= tolerance) {
+      if ((Math.abs(d - guess * guess)) / d * 100 <= tolerance) { // percent error
         return guess;
       }
       guess = (d / guess + guess) / 2;
@@ -28,7 +28,17 @@ public class recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
-      return 0;
+      return fibH(n, 1, 1);
+    }
+
+    private static int fibH(int n, int first, int second) {
+      if (n == 0) {
+        return 0;
+      }
+      if (n < 3) {
+        return second + first;
+      }
+      return fibH(n-1,second,first+second);
     }
 
     /*As Per classwork*/
