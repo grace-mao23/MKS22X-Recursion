@@ -37,4 +37,11 @@ public class recursion{
       return result;
     }
 
+    public static void main(String[] args) {
+      System.out.println(recursion.sqrt(100, 0.001));
+      System.out.println(recursion.sqrt(1, 0.001));
+      System.out.println(recursion.sqrt(0, 0.001));
+      System.out.println(recursion.sqrt((99*99), 0.001));
+    }
+
 }
