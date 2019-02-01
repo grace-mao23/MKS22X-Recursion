@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class recursion{
     /*You may write additional private methods */
 
@@ -7,7 +9,14 @@ public class recursion{
 
     */
     public static double sqrt(double n, double tolerance){
+      if (n == 0) {
+        return 0;
+      }
+      return sqrtH(n, 1.0, tolerance);
+    }
 
+    private double sqrtH(double d, double guess, double tolerance) {
+      
     }
 
     /*Recursively find the n'th fibbonaci number in linear time
