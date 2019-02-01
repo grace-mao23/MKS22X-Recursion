@@ -51,9 +51,10 @@ public class recursion{
     private static void sumsH(int n, int currentSum, ArrayList<Integer> list) {
       if (n == 0) {
         list.add(currentSum);
+      } else {
+        sumsH(n-1, currentSum+n, list); // number n is added
+        sumsH(n-1, currentSum, list); // number n is NOT added
       }
-      sumsH(n-1, currentSum+n, list); // number n is added
-      sumsH(n-1, currentSum, list); // number n is NOT added
     }
 
     public static void main(String[] args) {
@@ -67,6 +68,10 @@ public class recursion{
       System.out.println(recursion.fib(5)); //5
       System.out.println(recursion.fib(7)); //13
       System.out.println(recursion.fib(10)); //55
+      System.out.println(recursion.makeAllSums(0));
+      System.out.println(recursion.makeAllSums(1));
+      System.out.println(recursion.makeAllSums(2));
+      System.out.println(recursion.makeAllSums(3));
     }
 
 }
