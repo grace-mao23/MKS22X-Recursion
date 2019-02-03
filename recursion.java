@@ -58,16 +58,25 @@ public class recursion{
     }
 
     public static void main(String[] args) {
-      System.out.println(recursion.sqrt(100, 0.001));
-      System.out.println(recursion.sqrt(1, 0.001));
-      System.out.println(recursion.sqrt(0, 0.001));
-      System.out.println(recursion.sqrt((99*99), 0.001));
-      System.out.println(recursion.fib(0)); //0
-      System.out.println(recursion.fib(1)); //1
-      System.out.println(recursion.fib(2)); //1
-      System.out.println(recursion.fib(5)); //5
-      System.out.println(recursion.fib(7)); //13
-      System.out.println(recursion.fib(10)); //55
+      System.out.println("------Sqrt Tests------");
+      System.out.println(recursion.sqrt(0, 0.001) + " = " + Math.sqrt(0));
+      System.out.println(recursion.sqrt(1, 0.001) + " = " + Math.sqrt(1));
+      System.out.println(recursion.sqrt(2, 0.001) + " = " + Math.sqrt(2));
+      System.out.println(recursion.sqrt(100, 0.001) + " = " + Math.sqrt(100));
+      System.out.println(recursion.sqrt((99*99), 0.001) + " = " + Math.sqrt(99*99));
+      System.out.println("------Fib Tests------");
+      System.out.println("0th term: "+recursion.fib(0)); //0
+      System.out.println("1st term: "+recursion.fib(1)); //1
+      System.out.println("2nd term: "+recursion.fib(2)); //1
+      System.out.println("3rd term: "+recursion.fib(3));
+      System.out.println("4th term: "+recursion.fib(4));
+      System.out.println("5th term: "+recursion.fib(5));
+      System.out.println("6th term: "+recursion.fib(6));
+      System.out.println("7th term: "+recursion.fib(7));
+      System.out.println("8th term: "+recursion.fib(8));
+      System.out.println("9th term: "+recursion.fib(9));
+      System.out.println("10th term: "+recursion.fib(10));
+      System.out.println("------makeAllSums Tests------");
       System.out.println(recursion.makeAllSums(0));
       System.out.println(recursion.makeAllSums(1));
       System.out.println(recursion.makeAllSums(2));
